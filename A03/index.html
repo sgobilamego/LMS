@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título do navegador -->
+    <title>FotoCia</title>
+    <style>
+        .container-principal{
+        display: flex;
+        flex-direction: column;
+        }        
+        .content{
+            display: flex;
+            flex-direction: row;
+        }
+        .divheader {
+            height: 100px;
+            margin:0;
+            padding:0;
+            margin-left: 30%;
+        }
+        .navegador{
+            display: flex;
+            background-color: #527599;
+        }
+        .navegador > .botao-navegador {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color:rgb(3, 3, 3);
+            display: block;
+            padding: 10px;
+            margin: auto;
+        }
+        .navegador > .botao-navegador:hover{
+            background-color: #abb6c8;
+        }
+        .container-menu-esquerdo{
+            display: flex;
+            flex-direction: column;
+            background-color: #DADADA;
+            flex-basis: 300px;
+        }
+        .container-menu-esquerdo > .menu-esquerdo {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color:rgb(3, 3, 3);
+            padding: 10px;
+            background-color:  #DADADA;
+            width: auto;
+            margin: 10px;
+            text-align: left;
+            line-height: 75px;
+            font-size: 16px;
+        }
+        .content .container-menu-direito{
+            display: flex;
+            background-color: #DADADA;
+            flex-grow: 1;
+        }
+        .footer {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 12px;
+            bottom:0;
+            width:100%;
+            background-color: #DADADA;
+        }
+        IMG.cabecalho {
+            display: block;
+            margin-left: auto;
+            margin-right: auto 
+        }
+        .container-galeria{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: #DADADA;
+            flex-basis: 300px;
+            flex-grow: 3;
+        }
+
+        .container-galeria > .galeria {
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+
+    <header>
+        <img class="cabecalho" src="./FotoCia.png">       
+    </header>
+
+    <div class="container-principal">
+        <!-- Navegador superior móvel -->
+        <nav>
+        <div class="navegador"> 
+            <a href="./Page01.html" class="botao-navegador">Home</a>
+            <a href="https://museudafotografia.com.br/" class="botao-navegador">Museu da Fotografia</a>
+            <a href="https://www.infoescola.com/artes/fotografia/" class="botao-navegador">História</a>
+            <a href="https://lacunazfoto.medium.com/15-fot%C3%B3grafas-mulheres-e-suas-fotos-149e177a674f" class="botao-navegador">Mulheres na Fotografia</a>
+            </div>
+        </nav>
+
+        <div class="content">
+            <!-- Menu lateral esquerdo -->
+            <div class="container-menu-esquerdo">
+                <div class="menu-esquerdo">
+                    <div><a href="https://www.instagram.com/alineinagaki/?utm_source=ig_embed">Aline Inagaki</a></div>
+                    <div><a href="https://www.instagram.com/deborahghelman/?utm_source=ig_embed">Deborah Ghelman</a></div>
+                    <div><a href="https://www.instagram.com/isabellehattink/?utm_source=ig_embed">Isabelle Hattink</a></div>
+                    <div><a href="https://www.instagram.com/michellemoll_foto/">Michelle Moll</a></div>
+                    <div><a href="https://www.instagram.com/paulabeltrao_photography/?utm_source=ig_embed">Paula Beltrão</a></div>
+                </div>
+            </div>
+            
+            <!-- Galeria de fotos -->
+            <div class="container-galeria">
+                <img src="./Foto1.png" height="150px" width="150px" style="margin: 5% 5%;">
+                <img src="./Foto2.png" height="150px" width="150px" style="margin: 5% 5%;">
+                <img src="./Foto3.png" height="150px" width="150px" style="margin: 5% 5%;">
+                <img src="./Foto4.png" height="150px" width="150px" style="margin: 5% 5%;">
+                <img src="./Foto5.png" height="150px" width="150px" style="margin: 5% 5%;">
+                <img src="./Foto6.png" height="150px" width="150px" style="margin: 5% 5%;">
+                <img src="./Foto7.png" height="150px" width="150px" style="margin: 5% 5%;"> 
+                <img src="./Foto8.png" height="150px" width="150px" style="margin: 5% 5%;"> 
+                <img src="./Foto9.png" height="150px" width="150px" style="margin: 5% 5%;">  
+            </div>       
+        
+            <!-- Menu lateral direito -->
+            <div class="container-menu-direito"></div>    
+        </div>
+
+        <!-- Rodapé -->
+        <div class="footer">
+        <footer> © 2020-2021 UFC QXD. Todos os direitos reservados.<br> 
+        Feito com 😡 pela aluna Beatriz Sgobi #LMS.
+        </footer>
+
+    </div>
+    </div>
+</div>

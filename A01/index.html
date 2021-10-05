@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+    <title>Batata frita</title>
+    <head>
+        <!-- Título e cor -->
+        <h1 style="background-color: burlywood;">Batata frita</h1>
+        <!-- Subtítulo -->
+        <h3 style="background-color: rgb(255, 208, 0);">É preciso amar as pessoas como se fosse batata frita</h3>
+        <!-- Professor, aprendi a colocar o link simples, mas quis padronizar com imagens :D hehe -->
+        <!-- Home -->
+        <a href="./home.html">
+            <img src="./HOME.jpg" alt="" height='30'></a>
+            <!-- Cadastro -->
+            <a href="http://www.frietmuseum.be/en/">
+            <img src="./FRIETMUSEUM.jpg" alt="" height='30'></a>
+            <!-- Sobre -->
+            <a href="https://pt.wikipedia.org/wiki/Batata_frita">
+            <img src="./SOBRE.jpg" alt="" height='30'></a>
+            <!-- Receitas -->
+            <a href="https://comidinhasdochef.com/batata-frita-sequinha-e-crocante/#5">
+            <img src="./RECEITAS.jpg" alt="" height='30'></a>
+    </head>
+
+    <body style="background-color: rgba(222, 184, 135, 0.521);">
+        <!-- Poema -->
+        <h3 style="background-color: rgb(255, 208, 0);">Batatinha quando nasce</h3>
+        <p>Batatinha quando nasce espalha a rama pelo chão.<br>
+            Menininha quando dorme põe a mão no coração.<br>
+            Sou pequenininha do tamanho de um botão,<br>
+            Carrego papai no bolso e mamãe no coração<br>
+            O bolso furou e o papai caiu no chão.<br>
+            Mamãe que é mais querida ficou no coração.<br></p>
+
+        <!-- Gif -->
+        <img src="./BATATINHA.gif" alt="" height='250'><br><br>
+
+        <!-- Texto sobre -->
+        <h3 style="background-color: rgb(255, 208, 0);">O que é? De onde vem?</h3>
+        <article>
+        <p>
+            O termo batatas fritas refere-se ao produto da preparação culinária de batatas cortadas previamente em 
+            tiras, palitos finíssimos (batata palha), rodelas ou folhas e, posteriormente, fritas.
+            <br>
+            Ainda se questiona a verdadeira origem da batata frita. A discussão principal está entre Bélgica, França
+            e Espanha. O historiador belga Jo Gerard já menciona batatas serem fritas em 1681 nos Países Baixos, 
+            hoje na região da Bélgica. Na França há registros de receitas de batatas fritas no livro Les Soupers de
+            la Cour,de Menon, em 1758. Em alguns países o nome do prato faz alusão à origem francesa, como french fries
+            (fritas francesas), em inglês. Há ainda a alegação do prato ter sido criado na Espanha, primeiro país 
+            a receber as batatas do Novo Mundo. De acordo com o curador do Frietmuseum de Bruges, na Bélgica, o Professor 
+            Paul Ilegems, Santa Teresa d'Ávila teria fritado as primeiras batatas, de acordo com o costume da cozinha 
+            Mediterrânea de pratos fritos. Existe um documento de 29 de novembro de 1626, sobre uma refeição oferecida
+            por índios no Forte de Nacimiento, no Chile, para os conquistadores espanhóis, em que relata a presença 
+            de batatas fritas no prato dos convidados.
+            <br>
+            <!-- Créditos -->
+            <a href="https://pt.wikipedia.org/wiki/Batata_frita">Fonte: Wikipédia<a>
+        </p>
+        </article>
+        <br>
+
+        <!-- Título tabela -->
+        <h3 style="background-color: rgb(255, 208, 0);">Batata inglesa frita</h3>
+        <h4>Tabela nutricional</h4>
+        <!-- Tabela -->
+        <table> 
+            <tr>
+                <th>Calorias (valor energético)</th>
+                <th>182,00 kcal</th>
+            </tr>
+            <tr>
+                <td>Carboidratos</td>
+                <td>23,40g</td>
+            </tr>
+            <tr>
+                <td>Proteínas</td>
+                <td>2,80g</td>
+            </tr>
+            <tr>
+                <td>Gorduras totais</td>
+                <td>8,58g</td>
+            </tr>
+            <tr>
+                <td>Gorduras saturadas</td>
+                <td>00g</td>
+            </tr>
+            <tr>
+                <td>Sódio</td>
+                <td>00g</td>
+            </tr>
+        </table>
+
+        <!-- Créditos tabela -->
+        <a href="https://cuidai.com.br/alimentacao/busca-de-alimentos/alimentos/89-batata-inglesa-frita">Fonte: Cuidaí<a>
+        <br><br>
+        
+        <!-- Formulário -->
+        <h3 style="background-color: rgb(255, 208, 0);">Venha para o lado frito da força :)</h3>
+        <form>
+
+        <!-- Campo de texto 15c -->
+        <p>Seu nome:</p>
+        <input type="text" name="nome" placeholder="Digite seu nome aqui" maxlength="15" size="15"><br>
+            
+        <!-- Campo senha -->
+        <p>Senha:</p>
+        <input type="password" name="senha" placeholder="Pense em uma senha forte"><br>
+        
+        <!-- Campo leitura -->
+        <p>Você ama batatas?</p>
+        <input type="text" name="leitura" placeholder="Quem não ama batatas?" maxlength="0" size="0"><br>
+
+        <!-- Campo números 25000 e 30000 -->
+        <p>Escolha um número entre 25000 e 30000</p>
+        <input type="number" name="numero" placeholder=":D" min=25000 max=30000><br>
+            
+        <!-- Input radiobox -->
+        <p>Gostaria de assinar nossa newsletter?</p>
+            <input type="radio" id="sim" name="mail" value="sim">
+                <label for="sim">Sim, adoraria!</label><br>
+            <input type="radio" id="nao" name="mail" value="nao">
+                <label for="nao">Eca, spam!</label><br>
+        
+        <!-- Input checkbox -->
+        <p>Qual a sua batata favorita?</p>
+        <div>
+            <input type="checkbox" id="batata inglesa" name="batata inglesa" checked>
+            <label for="scales">Batata inglesa</label>
+            <input type="checkbox" id="batata doce" name="batata doce" checked>
+            <label for="scales">Batata doce</label>
+            <input type="checkbox" id="batata asterix" name="batata asterix" checked>
+            <label for="scales">Batata asterix</label>
+        </div>  
+        <br><br><input type="submit" name="enviar" value="Enviar">   
+        </form>
+        <br><br>  
+    </body>
+
+
+<!-- Rodapé -->
+<footer>UFC Quixadá - Design Digital - Beatriz Sgobi Lamego - 2020</footer> 
+</html>

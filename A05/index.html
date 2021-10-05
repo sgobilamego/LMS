@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título do navegador -->
+    <title>Maria Fifi</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .overlay-modal{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			top: 0;
+			left: 0;
+
+			display: none;
+			justify-content: center;
+			align-items: center;
+
+			animation-name: aparecer;
+			animation-duration: 500ms;
+		}
+
+		.overlay-modal.active{
+			display: flex;
+		}
+
+		.modal-container{
+			background-color: white;
+			width: 500px;
+			height: 256px;
+			border-radius: 10px;
+			position: relative;
+			animation: cair 500ms;
+		}
+		
+		.modal-content .modal-header{
+			display: flex;
+			padding: 2px;
+			margin-top: 4px;
+            font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+		}
+		
+		.modal-content .modal-header button{
+			margin-left: 5px;
+			background-color: transparent;
+			border: 0px;
+			width: 49px;
+			height: 50px;
+			cursor: pointer;
+		}
+		
+		.modal-container .modal-content{
+			padding: 0px 20px;
+		}
+
+		.modal-container .modal-footer{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.modal-container .modal-footer .button-modal{
+			border: none;
+			border-radius: 3px;
+			margin-left: 5px;
+			background-color: red;
+			color:white;
+			padding: 5px;
+		}
+
+		.bnt-submit{
+            border: none;
+			border-radius: 3px;
+            margin-top: 10px;
+			background-color: #d79492;
+            padding: 10px;
+			color: white;
+		}
+
+		
+		@keyframes aparecer{
+			from{
+				opacity: 0;
+			}to{
+				opacity: 1;
+			}
+		}
+
+		@keyframes cair{
+			from{
+				transform: translate(0px, -300px);
+			}to{
+				transform: translate(0px,0px);
+			}
+		}
+
+        .navegador{
+            background-color: #d79492;
+            height: 40px;
+        }
+
+        .navegador .cabecalho-navegador{
+            display: flex;
+            padding: 0px;
+            margin-left: 5px;
+            height: 40px;
+            width: auto;
+            position: relative;
+        }
+
+        .navegador .cabecalho-navegador button { 
+            margin-left: auto;
+            padding: 10px 20px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            background-color: #d79492;
+        }
+
+        #burguer {
+            margin-left: 0px;
+        }
+
+        .navegador .menu-retratil {
+            height: 0;
+            width: 400px;
+            overflow: hidden;
+        }
+
+        .navegador .menu-retratil a {
+            display: flex;
+            width: 400px;
+            font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-decoration: none;
+            color: black;
+            padding: 20px;
+            background-color: #f4f4ed;
+        }
+
+        .navegador .menu-retratil.active{
+            height:calc(100vh - 40px);
+            position: absolute;
+            width: 400px;
+            background-color: #f4f4ed;
+            transition: height 600ms;
+        }
+
+        .navegador .menu-retratil a:hover{
+            background-color: white;
+        }
+
+        .feed{
+            background-color: white;
+            padding: 40px;
+        }
+
+        .feed.active{
+        	margin-left: 400px;
+        }
+        
+        .feed .post{
+            padding: 25px;
+            margin-top: 8px;
+            font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f4f4ed;
+            text-decoration: rgb(17, 17, 17);
+            border-radius: 10px;
+        }
+
+        .feed .post-destaque{
+            padding: 25px;
+            margin-top: 8px;
+            font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #e1aead;
+            text-decoration: rgb(17, 17, 17);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Aqui começa o modal -->
+    <div class="overlay-modal">
+		<div class="modal-container">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title">Postagem</h3>
+				</div>
+				<div class="modal-body">
+					<form class="meuForm">
+						<label>Nome: </label><br><input type="text" id="nome" name="nome" placeholder="Nome..."required><br>
+						<br>
+                        <label>Mensagem: </label><br><textarea id="mensagem" name="sugestao" placeholder="Escreva aqui sua mensagem..." rows="4" cols="30" required></textarea>
+						<br><button type="button" onclick="enviar()" class="bnt-submit" value="Enviar">Enviar</button>	
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="button-modal">X</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- Aqui começa o navegador -->
+    <nav class="navegador">
+        <div class="cabecalho-navegador">
+            <!-- Logo da nav -->
+            <img src="logo.png" alt="">
+            <!-- Botão postar -->
+            <button class="abrir-modal">
+            Postar</button>
+            <!-- Botão hambúrguer -->
+            <button id="burguer"> &#9776; </button>
+        </div>
+        <div class="menu-retratil">
+            <!-- Links externos -->
+            <a href="https://www.instagram.com/choquei/?hl=pt-br" >Fofocas</a>
+            <a href="https://gshow.globo.com/realities/bbb/" >BBB21</a>
+            <a href="https://receitas.globo.com/" >Receitas</a>
+            <a href="https://brasilescola.uol.com.br/curiosidades" >Curiosidades</a>
+        </div>
+    </nav>
+
+    <!-- Aqui começa o feed DESAFIO -->
+    <div class="feed"></div>
+
+    <!-- Script -->
+    <script type="text/javascript">
+        let button = document.querySelector(".navegador .cabecalho-navegador #burguer");
+
+        let menu_retratil = document.querySelector(".navegador .menu-retratil");
+        
+        const abrirModal = document.querySelector('.abrir-modal');
+		const overlayModal = document.querySelector('.overlay-modal')
+		const botaoFechar = document.querySelector('.modal-container .modal-footer .button-modal');
+		const meuForm = document.querySelector('.meuForm');
+		const feed = document.querySelector('.feed');
+		let posicao = 0;
+
+        button.addEventListener("click", function(){
+            menu_retratil.classList.toggle("active");
+            feed.classList.toggle("active");
+        });
+
+        //Mensagens do feed DESAFIO
+		const posts_data = [{
+			nome: "Beatriz",
+			mensagem: "Quantos dias para acabar o semestre, hein? 🥴😜"
+		},
+			{
+				nome: "Tales",
+				mensagem: "Por que a velhinha não usa relógio? Porque ela é sem hora."
+			},
+
+            {
+				nome: "Thayla",
+				mensagem: "Alguém me atualiza dos posts? Eu estava estudando."
+			},
+            {
+				nome: "Daniel",
+				mensagem: "Gente, eu tô passado na bicicletinha...🥵"
+			},
+		]
+
+		function fecharModal(){
+			meuForm.reset(); //Função que limpa os campos do formulário
+			overlayModal.classList.remove("active");//Função que some com o Modal
+		}
+
+		abrirModal.addEventListener("click",function(){
+			overlayModal.classList.add("active");//Função que mostra o Modal
+		});
+
+		botaoFechar.addEventListener("click",function(){
+			fecharModal();
+		});
+
+		window.addEventListener("click",function(){
+			if(event.target == overlayModal){
+				fecharModal();
+			}
+		});
+
+		function enviar(){
+			let nome = document.getElementById('nome').value;
+			let mensagem = document.getElementById('mensagem').value;
+			let postagem = `<div class="post"><h3>${nome}</h3><br><p>${mensagem}</p></div>`;//Modelando e preenchendo a postagem para o feed
+
+			fecharModal();
+			posts_data.push({nome: nome, mensagem: mensagem});//Adicionando a postagem ao nosso banco de dados
+
+			feed.innerHTML += postagem;
+
+			return true;
+		}
+
+		/*Essa função tem o intuito de iniciar nossa página com as 2 postagens, diferenciando-as*/
+		function inicio(){
+			for(postm of posts_data){//Aqui estamos percorrendo todos os valores do vetor
+				if(postm == posts_data[0]){//Se for o primeiro post, então faça diferente
+					feed.innerHTML += `<div class="post-destaque"><h3>${postm.nome}</h3><br><p>${postm.mensagem}</p></div>`;
+				}
+				feed.innerHTML += `<div class="post"><h3>${postm.nome}</h3><br><p>${postm.mensagem}</p></div>`;	
+			}
+			mudancaDeTexto();
+		}
+
+		/*Aqui temos a função para mudar o destaque a cada 2s em ordem*/
+		function mudancaDeTexto(){
+			setInterval(function(){
+				let divDestaque = document.querySelector('.post-destaque');
+				
+				divDestaque.innerHTML = `<h3>${posts_data[posicao].nome}</h3><br><p>${posts_data[posicao].mensagem}</p>`;//Aqui fazemos a substituição
+				posicao++;
+				if(posicao == posts_data.length){
+					posicao = 0;
+				}
+			},2000);
+		}
+		inicio();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+/*Estilo de componentes*/
+body{
+    overflow: hidden;
+}
+img{
+    height: 50px;
+}
+textarea:focus{
+    background-color: white;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container{
+    width: 900px;
+    height: 100vh;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color:rgb(231, 231, 231);
+}
+
+/* Estilo do grupo*/
+.paginaGrupos{
+    display: inline-flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.grupo{/* Lista de grupos */
+    display: inline-flex;
+    margin-top: 8px;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #dbdbdb;
+    border-radius: 15px;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color:rgb(36, 36, 36)
+}
+.col-4{
+    overflow-y: scroll;
+    max-height: 77vh;
+    padding: 0px;
+}
+
+/*Estilo do chat*/
+.texto{
+    resize: none;
+    flex-grow: 2;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: large;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mensagem{
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+    padding-top: 0px;
+    width: fit-content;
+    background-color: rgb(248, 248, 248);
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mensagem h2{
+    margin: 10px;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: rgb(12, 11, 11);
+}
+
+.mensagem a{
+    color:rgb(36, 36, 36);
+    margin: 10px;
+    font-size: 16px;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.paginaMensagens{
+    height: 77vh;
+    overflow-y: scroll;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.col{
+    display: flex;
+    flex-grow: 1;
+    min-height: 8vh;
+    max-height: 12vh;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*Forms*/
+.formulario{
+    display: inline-flex;
+    flex-grow: 1;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.formularioGrupo{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*Header*/
+.col-12{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #3944bc;
+    padding-top: 1px;
+    text-align: center;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+
+/*Botões*/
+.inserir{
+    align-self: flex-end;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 6px;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.enviar{
+    align-self: center;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 6px;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.btn-primary{
+    float: right;
+}
+
+.row{
+    border-top: 3px solid #ffffff;
+}
+
+
+/*Barras de rolagem*/
+::-webkit-scrollbar{
+    width: 3px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #afafaf; 
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background:#afafaf;
+    border-radius: 20px;
+}

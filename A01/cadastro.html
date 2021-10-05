@@ -1,0 +1,64 @@
+<html lang="en">
+    <title>Cadastro - Batata frita</title>
+    <head>
+        <!-- Título e cor -->
+        <h1 style="background-color: burlywood;">Batata frita</h1>
+        <!-- Professor, aprendi a colocar o link simples, mas quis padronizar com imagens :D hehe -->
+        <!-- Home -->
+        <a href="./home.html">
+            <img src="./HOME.jpg" alt="" height='30'></a>
+            <!-- Cadastro -->
+            <a href="./cadastro.html">
+            <img src="./CADASTRO.jpg" alt="" height='30'></a>
+            <!-- Sobre -->
+            <a href="./sobre.html">
+            <img src="./SOBRE.jpg" alt="" height='30'></a>
+            <!-- Receitas -->
+            <a href="./receitas.html">
+            <img src="./RECEITAS.jpg" alt="" height='30'></a>
+    </head>
+
+<body style="background-color: rgba(222, 184, 135, 0.521);">
+    <!-- Formulário -->
+    <h3 style="background-color: rgb(194, 21, 15);">Venha para o lado frito da força :)</h3>
+    <form>
+        <!-- Campo de texto 15c -->
+        <p>Seu nome:</p>
+        <input type="text" name="nome" placeholder="Digite seu nome aqui" maxlength="15" size="15"><br>
+
+        <!-- Campo senha -->
+        <p>Senha:</p>
+        <input type="password" name="senha" placeholder="Pense em uma senha forte"><br>
+        
+        <!-- Campo leitura -->
+        <p>Você ama batatas?</p>
+        <input type="text" name="leitura" placeholder="Quem não ama batatas?" maxlength="0" size="0"><br>
+
+        <!-- Campo números 25000 e 30000 -->
+        <p>Escolha um número entre 25000 e 30000</p>
+        <input type="number" name="numero" placeholder=":D" min=25000 max=30000><br>
+
+        <!-- Input radiobox -->
+        <p>Gostaria de assinar nossa newsletter?</p>
+            <input type="radio" id="sim" name="mail" value="sim">
+                <label for="sim">Sim, adoraria!</label><br>
+            <input type="radio" id="nao" name="mail" value="nao">
+                <label for="nao">Eca, spam!</label><br>
+        
+        <!-- Input checkbox -->
+        <p>Qual a sua batata favorita?</p>
+        <div>
+            <input type="checkbox" id="batata inglesa" name="batata inglesa" checked>
+            <label for="scales">Batata inglesa</label>
+            <input type="checkbox" id="batata doce" name="batata doce" checked>
+            <label for="scales">Batata doce</label>
+            <input type="checkbox" id="batata asterix" name="batata asterix" checked>
+            <label for="scales">Batata asterix</label>
+        </div>  
+        <br><br><input type="submit" name="enviar" value="Enviar">   
+    </form>
+    <br><br>
+</body>
+<!-- Rodapé -->
+<footer>UFC Quixadá - Design Digital - Beatriz Sgobi Lamego - 2020</footer> 
+</html>
